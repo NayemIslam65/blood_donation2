@@ -1,0 +1,41 @@
+/*
+font-family: 'Dosis', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+
+
+body{
+    background-image: url(../images/featured_bg.png);
+    font-family: 'Dosis', sans-serif;
+    color: #8B0D32;
+
+}
+/*header starts*/
+header{
+    background-color: #F4F4F4;
+}
+.custom_secondary{
+    border: none !important;
+    background:transparent !important;
+}
+.custom_icon{
+    padding:10px;
+    color:#FF0202;
+}
+.custom_2{
+    padding:10px;
+    color:white;
+}
+.custom_nav ul li a{
+    font-weight: bold;
+    font-size: 15px;
+    color: #8B0D32 !important;
+    padding: 0 20px !important;
+    border-radius: 15px;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+.custom_nav ul li a:hover{
+        background-color: #f05c5c;
+}
+/*header ends*/
