@@ -39,3 +39,52 @@ header{
         background-color: #f05c5c;
 }
 /*header ends*/
+
+/*why starts*/
+/*kid starts*/
+.kid{
+    padding: 50px;
+}
+.common_title{}
+.common_title h1{
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+
+    font-size: 40px;
+}
+.common_title hr{
+     width: 230px;
+    border-bottom: 3px dashed #8B0D32 ;
+    margin: 0 auto;
+}
+.kid_content{
+    padding-top: 60px;
+}
+.kid_content h1{
+    font-weight: bold;
+    font-size: 30px;
+}
+.kid_content hr{
+    width: 200px;
+    margin-left:0; 
+}
+.kid_content p{
+      font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: light;
+
+   
+}
+.kid_content a{}
+.kid_img{
+    padding-top: 60px;
+}
+.kid_img img{
+    border-radius: 20px;
+}
+
+
+
+
+
+/*why ends*/
