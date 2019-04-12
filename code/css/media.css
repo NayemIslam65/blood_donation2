@@ -1,6 +1,11 @@
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) { 
+.common_title h2{
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
 
+    font-size: 20px !important;
+}
 
 }
 
@@ -9,7 +14,7 @@
 
 
 }
-
+ 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) { 
 
