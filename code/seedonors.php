@@ -2,6 +2,8 @@
     
     include "lib/connect.php";
 
+    if ($select_query->num_rows>0){ 
+
 ?>
 
 <!doctype html>
@@ -70,67 +72,84 @@
     
         <!--    banner part starts   -->
     <div class="col-md-12 banner">
+<!--
     <span id="info1">See All Donors</span>
 	<div id="info" class="col-md-12">
+-->
            
             <!--=====================
           Content
 ======================-->
-        <section id="content">
-            <div class="table table-dark">
-                <table border="1" width=100%;>
-                    <tr>
-                        <th>Donar Name</th>
-                        <th>Blood Group</th>
-                        <th>Email</th>
-                        <th>Phone Number</th>
-                        <th>Address</th>
-<!--                        <th>Phone Number</th>-->
-<!--                        <th>Action</th>-->
-                    </tr>
-                    <?php   if($select_query->num_rows>0){         ?>
-                    <?php while($data=$select_query->fetch_assoc()){ ?>
-                    <tr>
-                        <th>
-                            <?php echo $data['full_name'] ?>
-                        </th>
-                        <th>
-                            <?php echo $data['blood_group'] ?>
-                        </th>
-                        <th>
-                            <?php echo $data['email'] ?>
-                        </th>
-                        <th>
-                            <?php echo $data['phone'] ?>
-                        </th>
-                        <th>
-                            <?php echo $data['address'] ?>
-                        </th>
-<!--
-                        <th>
-                            <?php echo $data['pass'] ?>
-                        </th>
--->
-<!--
-                        <td>
-                            <a href="lib/edit.php?id=<?php  echo $data['id']; ?>">Edit</a>
-                            <a href="lib/delete.php?id=<?php echo $data['id'];  ?>">Delete</a>
-                        </td>
--->
-                    </tr>
-
-                    <?php } ?>
-                    <?php } else{  ?>
-                    <tr>
-                        <td colspan="6">No Records Found!</td>
-                    </tr>
-                    <?php } ?>
-                </table>
+     <!--  hospital start-->
+<section id="hospital"   style="background-image: url(images/background.png);
+    background-position: center;
+    background-size: cover; 
+    background-repeat: no-repeat;">
+    <div class="container" style="margin-bottom: 40px;">
+    <div class="container" style="margin-bottom: 40px;">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+               <div class="hospial_content text-center" style="margin-top: 100px;">
+                <h1 style="font-size: 30pt;
+font-weight: bold;">All Available Donors</h1>
+         
+                </div>
             </div>
-        </section>
+            
+        </div>
+        
+        <div class="row">
+                   
+              <div class="col-md-12 col-lg-12">      
+
+                 <div class="row" style="margin: 40px 0px;">
+                    
+             
+                    <?php while($data=$select_query->fetch_assoc()){ ?>
+                    <div class="col-md-3 col-lg-3">
+                    <div class="card">
+                     <div class="card-header card_custom_header2 text-center">
+                     <span><?php echo $data['blood_group']; ?></span><span class="card_img"> <img src="images/card_logo1.png" class="img-fluid" alt="card_logo"> </span>
+  </div>
+                    <img class="card-img-top" src="images/person.jpg">
+                    <div class="card-block">
+                    
+                        <h4 class="card-title2 text-center mt-3 custom_last" style="color: #56d47e !important;"><?php echo $data['full_name']; ?></h4>
+                       
+                        <div class="card-text text-center">
+                      <?php echo $data['email']; ?>
+                        </div>  
+                          <div class="card-text text-center">
+                      <?php echo $data['phone']; ?>
+                        </div>
+                         <div class="card-text text-center">
+                  <?php echo $data['address']; ?>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                       <span class="float-left leftone"></span>
+                       
+                       <span>|</span>
+                       <span class="float-right rightone"></span>
+                    </div>
+                    
+                </div>
+                    
+            </div>
+            <?php } ?>
+                    <?php } else{  } ?>
+         
+            </div>
+            </div></div>
+            
+        </div>
+    </div>
+  
+    
+</section>
 	</div>
       
-       </div>
+   
         
         
         <!--    banner part ends   -->
