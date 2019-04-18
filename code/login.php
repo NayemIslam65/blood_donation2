@@ -24,7 +24,7 @@
     <header>
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo" class="img-fluid"></a>
+                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" class="img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -32,28 +32,28 @@
                 <div class="collapse navbar-collapse custom_nav" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="factsaboutblood.html">Facts About BLood</a>
+                            <a class="nav-link" href="why.php">Facts About BLood</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="beadonor.html">Be a Donor</a>
+                            <a class="nav-link" href="beadonor.php">Be a Donor</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Request Blood</a>
+                            <a class="nav-link" href="request.php">Request For Blood</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">See all Donors</a>
+                            <a class="nav-link" href="seedonors.php">See All Donors</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Requested Bloods</a>
+                            <a class="nav-link" href="showrequest.php">All Requested Bloods</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Find Bloods</a>
+                            <a class="nav-link" href="find.php">Find Bloods</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
+                            <a class="nav-link" href="login.php">Login</a>
                         </li>
                     </ul>
                 </div>

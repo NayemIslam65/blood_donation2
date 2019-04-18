@@ -32,28 +32,28 @@
                 <div class="collapse navbar-collapse custom_nav" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="why.html">Facts About BLood</a>
+                            <a class="nav-link" href="why.php">Facts About BLood</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="beadonor.html">Be a Donor</a>
+                            <a class="nav-link" href="beadonor.php">Be a Donor</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Request Blood</a>
+                            <a class="nav-link" href="request.php">Request For Blood</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">See all Donors</a>
+                            <a class="nav-link" href="seedonors.php">See All Donors</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Requested Bloods</a>
+                            <a class="nav-link" href="showrequest.php">All Requested Bloods</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="find.html">Find Bloods</a>
+                            <a class="nav-link" href="find.php">Find Bloods</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
+                            <a class="nav-link" href="login.php">Login</a>
                         </li>
                     </ul>
                 </div>
