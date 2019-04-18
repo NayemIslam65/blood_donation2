@@ -1,8 +1,8 @@
-
 <?php 
     
     include "lib/connection.php";
     $result="";
+ //insert query
     if(isset($_POST['add_data'])){
         $full_name= $_POST['full_name'];
         $blood_group= $_POST['blood_group'];
@@ -14,22 +14,27 @@
         
         
         
-        if($pass==$conn_pass){
-        $insert_sql = "INSERT INTO donor (full_name,blood_group,email,pass,phone,address) values ('$full_name', '$blood_group', '$$email','$pass','$phone','$address')";
+//        if($pass==$conn_pass){
+        $insert_sql = "INSERT INTO donor (full_name,blood_group,email,pass,phone,address) values ('$full_name', '$blood_group', '$email','$pass',$phone,'$address')";
         
         if($conn->query($insert_sql)){
-            $result = "data added";
+            $result = "Successfully Submitted!";
         }
         else{
             die($conn->error);
         }
-        }
-
-       else{
-            $result= "Password did not match! Try again";       }
+//        }
+//
+//       else{
+//            $result= "Password did not match! Try again";       }
     }
-?>
 
+       //select query
+    
+    $select_sql="SELECT * FROM donor";
+    $select_query=$conn->query($select_sql);
+
+?>
 
 
 <!doctype html>
@@ -75,13 +80,13 @@
                             <a class="nav-link" href="beadonor.php">Be a Donor</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Request Blood</a>
+                            <a class="nav-link" href="request.php">Request For Blood</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">See all Donors</a>
+                            <a class="nav-link" href="seedonors.php">See All Donors</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Requested Bloods</a>
+                            <a class="nav-link" href="showrequest.php">All Requested Bloods</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="find.php">Find Bloods</a>
@@ -100,33 +105,33 @@
     <div class="container-contact100">
 
         <div class="wrap-contact100">
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="contact100-form validate-form" method="post">
+            <form autocomplete="off" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="contact100-form validate-form" method="post">
                 <span class="contact100-form-title bedonortitle">
                     Be a Donor & Save others Life
                 </span>
 
                 <div class="wrap-input100 validate-input" data-validate="Please enter your name">
-                    <input class="input100" type="text" name="full_name" placeholder="Full Name">
+                    <input class="input100" type="text" name="full_name" placeholder="Full Name" required>
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Please enter your Blood Group">
-                    <input class="input100" type="text" name="blood_group" placeholder="Blood Group">
+                    <input class="input100" type="text" name="blood_group" placeholder="Blood Group" required>
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Please enter your email: e@a.x">
-                    <input class="input100" type="text" name="email" placeholder="E-mail">
+                    <input class="input100" type="text" name="email" placeholder="E-mail" required>
                     <span class="focus-input100"></span>
                 </div>
                 
                 <div class="wrap-input100 validate-input" data-validate = "Please enter your phone">
-					<input class="input100" type="password" name="pass" id="password" placeholder="Password">
+					<input class="input100" type="password" name="pass" id="password" placeholder="Password" required>
 					<span class="focus-input100"></span>
 				</div>
                
                 <div class="wrap-input100 validate-input" data-validate = "Please enter your phone">
-					<input class="input100" type="password" name="conn_pass" id="password2" placeholder="Re-enter Password" onKeyUp="checkPass(); return false;">
+					<input class="input100" type="password" name="conn_pass" id="password2" placeholder="Re-enter Password" onKeyUp="checkPass(); return false;" required>
 					<span class="focus-input100"></span>
 				</div>
                 <div>
@@ -134,12 +139,12 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Please enter your phone">
-                    <input class="input100" type="number" name="phone" placeholder="Phone">
+                    <input class="input100" type="number" name="phone" placeholder="Phone" required>
                     <span class="focus-input100"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Please enter your Address">
-                    <textarea class="input100" name="address" placeholder="Address"></textarea>
+                    <textarea class="input100" name="address" placeholder="Address" required></textarea>
                     <span class="focus-input100"></span>
                 </div>
 
@@ -154,20 +159,21 @@
 -->
 
                 <div class="container-contact100-form-btn">
-                    <button class="contact100-form-btn">
+                    <button name="add_data" value="Send" class="contact100-form-btn">
                         <span>
                             <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
                             Send
                         </span>
                     </button>
+</div>  
+                 <div class="result" style="text-align:center">
+            <?php echo $result; ?> 
                 </div>
             </form>
         </div>
     </div>
     
-    <div class="result">
-            <?php echo $result ?> 
-</div>           
+            
 
     <!--    form ends   -->
 
