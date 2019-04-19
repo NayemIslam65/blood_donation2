@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `donor` (
+   `id` int(100) PRIMARY KEY AUTO INCREMENT; 
   `full_name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `pass` varchar(100) NOT NULL,
@@ -58,6 +59,7 @@ INSERT INTO `donor` (`full_name`, `email`, `pass`, `phone`, `address`, `blood_gr
 --
 
 CREATE TABLE `request` (
+       `id` int(100) PRIMARY KEY AUTO INCREMENT; 
   `name` varchar(100) NOT NULL,
   `bloodgroup` varchar(100) NOT NULL,
   `mail` varchar(100) NOT NULL,
